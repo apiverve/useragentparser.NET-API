@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>APIVerve.API.UserAgentParser</Title>
+    <Version>1.0.0</Version>
+    <Authors>APIVerve</Authors>
+    <Company>APIVerve</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://apiverve.com/marketplace/api/useragentparser</PackageProjectUrl>
+    <SignAssembly>False</SignAssembly>
+    <Description>User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.</Description>
+    <RepositoryUrl>https://github.com/apiverve/useragentparser-NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>user agent parser; user agent parser api; user agent parser tool; user agent parser software; user agent parser service; user agent parser library; user agent parser sdk; user agent parser code; user agent parser script; user agent parser program; user agent parser application; user agent parser app; user agent parser utility; user agent parser helper; user agent parser helper tool; user agent parser helper software; user agent parser helper service; user agent parser helper library; user agent parser helper sdk; user agent parser helper code; user agent parser helper script; user agent parser helper program; user agent parser helper application; user agent parser helper app; user agent parser helper tool; user agent parser helper utility; user agent parser helper</PackageTags>
+    <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
