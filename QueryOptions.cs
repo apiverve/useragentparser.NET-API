@@ -5,6 +5,6 @@ using System.Text;
 namespace APIVerve
 {
     public class UserAgentParserQueryOptions {
-public string ua { get; set; }
+public string Ua { get; set; }
 }
 }
