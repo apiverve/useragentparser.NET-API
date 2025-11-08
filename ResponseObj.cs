@@ -4,83 +4,94 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class browser
-{
-    [JsonProperty("name")]
-    public string name { get; set; }
+    /// <summary>
+    /// Browser data
+    /// </summary>
+    public class Browser
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-    [JsonProperty("version")]
-    public string version { get; set; }
+        [JsonProperty("version")]
+        public string Version { get; set; }
 
-    [JsonProperty("major")]
-    public string major { get; set; }
+        [JsonProperty("major")]
+        public string Major { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Engine data
+    /// </summary>
+    public class Engine
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-public class engine
-{
-    [JsonProperty("name")]
-    public string name { get; set; }
+        [JsonProperty("version")]
+        public string Version { get; set; }
 
-    [JsonProperty("version")]
-    public string version { get; set; }
+    }
+    /// <summary>
+    /// Os data
+    /// </summary>
+    public class Os
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-}
+        [JsonProperty("version")]
+        public string Version { get; set; }
 
-public class os
-{
-    [JsonProperty("name")]
-    public string name { get; set; }
+    }
+    /// <summary>
+    /// Device data
+    /// </summary>
+    public class Device
+    {
+    }
+    /// <summary>
+    /// Cpu data
+    /// </summary>
+    public class Cpu
+    {
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("ua")]
+        public string Ua { get; set; }
 
-    [JsonProperty("version")]
-    public string version { get; set; }
+        [JsonProperty("browser")]
+        public Browser Browser { get; set; }
 
-}
+        [JsonProperty("engine")]
+        public Engine Engine { get; set; }
 
-public class device
-{
-}
+        [JsonProperty("os")]
+        public Os Os { get; set; }
 
-public class cpu
-{
-}
+        [JsonProperty("device")]
+        public Device Device { get; set; }
 
-public class data
-{
-    [JsonProperty("ua")]
-    public string ua { get; set; }
+        [JsonProperty("cpu")]
+        public Cpu Cpu { get; set; }
 
-    [JsonProperty("browser")]
-    public browser browser { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("engine")]
-    public engine engine { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("os")]
-    public os os { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("device")]
-    public device device { get; set; }
-
-    [JsonProperty("cpu")]
-    public cpu cpu { get; set; }
-
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
